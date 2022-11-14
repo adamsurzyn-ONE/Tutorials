@@ -1,0 +1,10 @@
+touch .gitignore
+# Default .gitignore file for shared Ui Path projects
+
+# local files
+.local
+.settings
+.tmh
+.objects
+.screenshots
+.project
