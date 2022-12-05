@@ -3,6 +3,7 @@
   "description": "Goes into the acme website provided by UiPath. Then it takes user information and converts them into a secure hash and puts it into description of a user account if their work is WI5",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Credentials.Activities": "[2.0.0]",
     "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.System.Activities": "[22.4.1]",
     "UiPath.Testing.Activities": "[22.4.3]",
