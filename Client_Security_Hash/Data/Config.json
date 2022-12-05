@@ -1,7 +1,7 @@
 {
 "Settings":[
  {
-  "Name": "ACME_Windows_Credentials",
+  "Name": "ACMEWindowsCredentials",
   "Value": "UiPath_ACME",
   "Description": "The name of the Windows Credential"
  },
@@ -16,7 +16,7 @@
   "Description": "The name of the Windows Credential"
  },
  {
-  "Name": "Business_Process_Name",
+  "Name": "BusinessProcessName",
   "Value": "Hashing ACME account information",
   "Description": "The name of the Windows Credential"
  },
@@ -83,4 +83,6 @@
   "Description": "Must be TRUE or FALSE. If the value is TRUE and an error occurs in Initialization state or the MaxConsecutiveSystemExceptions is reached, the job is marked as Faulted."
  }
 ],
+"Assets":[
+]
 }
