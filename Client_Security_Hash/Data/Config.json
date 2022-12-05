@@ -1,0 +1,86 @@
+{
+"Settings":[
+ {
+  "Name": "ACME_Windows_Credentials",
+  "Value": "UiPath_ACME",
+  "Description": "The name of the Windows Credential"
+ },
+ {
+  "Name": "ACME_URL",
+  "Value": "https://acme-test.uipath.com/login",
+  "Description": "The name of the Windows Credential"
+ },
+ {
+  "Name": "SHA1_URL",
+  "Value": "http://www.sha1-online.com/",
+  "Description": "The name of the Windows Credential"
+ },
+ {
+  "Name": "Business_Process_Name",
+  "Value": "Hashing ACME account information",
+  "Description": "The name of the Windows Credential"
+ },
+],
+"Constants":[
+ {
+  "Name": "MaxRetryNumber",
+  "Value": 2,
+  "Description": "Must be 0 if working with Orchestrator queues. If &gt; 0, the robot will retry the same transaction which failed with a system exception. Must be an integer value."
+ },
+ {
+  "Name": "MaxConsecutiveSystemExceptions",
+  "Value": 3,
+  "Description": "The number of consecutive system exceptions allowed. If MaxConsecutiveSystemExceptions is reached, the job is stopped. To disable this feature, set the value to 0. "
+ },
+ {
+  "Name": "ExScreenshotsFolderPath",
+  "Value": "Exceptions_Screenshots",
+  "Description": "Where to save exceptions screenshots - can be a full or a relative path."
+ },
+ {
+  "Name": "LogMessage_GetTransactionData",
+  "Value": "Processing Transaction Number: ",
+  "Description": "Static part of logging message. Calling Get Transaction Data."
+ },
+ {
+  "Name": "LogMessage_GetTransactionDataError",
+  "Value": "Error getting transaction data for Transaction Number: ",
+  "Description": "Static part of logging message. Error retrieving Transaction Data."
+ },
+ {
+  "Name": "LogMessage_Success",
+  "Value": "Transaction Successful.",
+  "Description": "Static part of logging message. Processed Transaction succesful."
+ },
+ {
+  "Name": "LogMessage_BusinessRuleException",
+  "Value": "Business rule exception.",
+  "Description": "Static part of logging message. Processed Transaction failed with business exception."
+ },
+ {
+  "Name": "LogMessage_ApplicationException",
+  "Value": "System exception.",
+  "Description": "Static part of logging message. Processed Transaction failed with application exception."
+ },
+ {
+  "Name": "ExceptionMessage_ConsecutiveErrors",
+  "Value": "The maximum number of consecutive system exceptions was reached. ",
+  "Description": "Error message in case MaxConsecutiveSystemExceptions number is reached."
+ },
+ {
+  "Name": "RetryNumberGetTransactionItem",
+  "Value": 2,
+  "Description": "The number of times Get Transaction Item activity is retried in case of an exception. Must be an integer &gt;= 1."
+ },
+ {
+  "Name": "RetryNumberSetTransactionStatus",
+  "Value": 2,
+  "Description": "The number of times Set transaction status activity is retried in case of an exception. Must be an integer &gt;= 1. "
+ },
+ {
+  "Name": "ShouldMarkJobAsFaulted",
+  "Value": true,
+  "Description": "Must be TRUE or FALSE. If the value is TRUE and an error occurs in Initialization state or the MaxConsecutiveSystemExceptions is reached, the job is marked as Faulted."
+ }
+],
+}
