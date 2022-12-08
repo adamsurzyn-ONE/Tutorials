@@ -16,7 +16,7 @@
   "Description": "The name of the Windows Credential"
  },
  {
-  "Name": "BusinessProcessName",
+  "Name": "logF_BusinessProcessName",
   "Value": "Client_Security_Hash",
   "Description": "The name of the Windows Credential"
  },
