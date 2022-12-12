@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2630,1299</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2630,1187</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_ExtractClientInformation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -147,26 +147,26 @@
       </Assign>
       <Assign sap:VirtualizedContainerService.HintSize="467,60" sap2010:WorkflowViewState.IdRef="Assign_10">
         <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[StrArray(2)]</OutArgument>
+          <OutArgument x:TypeArguments="x:String">[out_ClientID]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[out_ClientID]</InArgument>
+          <InArgument x:TypeArguments="x:String">[StrArray(2).Trim]</InArgument>
         </Assign.Value>
       </Assign>
       <Assign sap:VirtualizedContainerService.HintSize="467,60" sap2010:WorkflowViewState.IdRef="Assign_11">
         <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[StrArray(4)]</OutArgument>
+          <OutArgument x:TypeArguments="x:String">[out_ClientName]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[out_ClientName]</InArgument>
+          <InArgument x:TypeArguments="x:String">[StrArray(4).Trim]</InArgument>
         </Assign.Value>
       </Assign>
       <Assign sap:VirtualizedContainerService.HintSize="467,60" sap2010:WorkflowViewState.IdRef="Assign_12">
         <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[StrArray(6)]</OutArgument>
+          <OutArgument x:TypeArguments="x:String">[out_ClientCountry]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[out_ClientCountry]</InArgument>
+          <InArgument x:TypeArguments="x:String">[StrArray(6).Trim]</InArgument>
         </Assign.Value>
       </Assign>
       <Assign sap:VirtualizedContainerService.HintSize="467,60" sap2010:WorkflowViewState.IdRef="Assign_13">
