@@ -5,11 +5,12 @@
     <x:Property Name="out_ClientCountry" Type="OutArgument(x:String)" />
     <x:Property Name="in_WIID" Type="InArgument(x:String)" />
     <x:Property Name="io_BrowserInstance" Type="InOutArgument(ui:UiElement)" />
+    <x:Property Name="out_ClientInfoToHash" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2630,1187</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2630,1299</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_ExtractClientInformation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -87,7 +88,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_ExtractClientInformation" sap:VirtualizedContainerService.HintSize="551,1014" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_ExtractClientInformation" sap:VirtualizedContainerService.HintSize="551,1114" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="StrArray" />
       <Variable x:TypeArguments="ui:GenericValue" Name="RetrievedStr" />
@@ -98,7 +99,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="509,922" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="509,1022" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,12 +142,12 @@
           <OutArgument x:TypeArguments="s:String[]">[StrArray]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="s:String[]">[RetrievedStr.Split(":")]</InArgument>
+          <InArgument x:TypeArguments="s:String[]">[RetrievedStr.Split({":","Client"},StringSplitOptions.RemoveEmptyEntries)]</InArgument>
         </Assign.Value>
       </Assign>
       <Assign sap:VirtualizedContainerService.HintSize="467,60" sap2010:WorkflowViewState.IdRef="Assign_10">
         <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[StrArray(1)]</OutArgument>
+          <OutArgument x:TypeArguments="x:String">[StrArray(2)]</OutArgument>
         </Assign.To>
         <Assign.Value>
           <InArgument x:TypeArguments="x:String">[out_ClientID]</InArgument>
@@ -154,7 +155,7 @@
       </Assign>
       <Assign sap:VirtualizedContainerService.HintSize="467,60" sap2010:WorkflowViewState.IdRef="Assign_11">
         <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[StrArray(2)]</OutArgument>
+          <OutArgument x:TypeArguments="x:String">[StrArray(4)]</OutArgument>
         </Assign.To>
         <Assign.Value>
           <InArgument x:TypeArguments="x:String">[out_ClientName]</InArgument>
@@ -162,10 +163,18 @@
       </Assign>
       <Assign sap:VirtualizedContainerService.HintSize="467,60" sap2010:WorkflowViewState.IdRef="Assign_12">
         <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[StrArray(3)]</OutArgument>
+          <OutArgument x:TypeArguments="x:String">[StrArray(6)]</OutArgument>
         </Assign.To>
         <Assign.Value>
           <InArgument x:TypeArguments="x:String">[out_ClientCountry]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="467,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[out_ClientInfoToHash]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[StrArray(2).Trim + "-" + StrArray(4).Trim + "-" + StrArray(6).Trim]</InArgument>
         </Assign.Value>
       </Assign>
     </Sequence>
