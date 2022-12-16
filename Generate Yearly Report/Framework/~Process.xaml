@@ -93,14 +93,12 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke System1_ExtractClientInformation workflow" sap:VirtualizedContainerService.HintSize="362,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="System1\System1_ExtractClientInformation.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_ClientID" />
-        <OutArgument x:TypeArguments="x:String" x:Key="out_ClientName" />
-        <OutArgument x:TypeArguments="x:String" x:Key="out_ClientCountry" />
         <InArgument x:TypeArguments="x:String" x:Key="in_WIID">
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_TransactionItem(&quot;WIID&quot;).ToString" />
         </InArgument>
         <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_BrowserInstance" />
         <InArgument x:TypeArguments="x:String" x:Key="out_ClientInfoToHash" />
+        <OutArgument x:TypeArguments="x:String" x:Key="out_TaxID" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="362,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
