@@ -86,14 +86,18 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_MergeMonthlyReports" sap:VirtualizedContainerService.HintSize="554,1185" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_MergeMonthlyReports" sap:VirtualizedContainerService.HintSize="554,1145" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="HowManyMonths">
         <Variable.Default>
           <Literal x:TypeArguments="x:Int32" Value="12" />
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:Int32" Name="i" />
+      <Variable x:TypeArguments="x:Int32" Name="i">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="1" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_MonthlyReports" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -116,7 +120,7 @@
         <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="i &lt;= HowManyMonths" />
       </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
-    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="512,513" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[&quot;Data\Output\Yearly-Report-2021-&quot;+in_TaxID.Trim]">
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="512,473" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[&quot;Data\Output\Yearly-Report-2021-&quot;+in_TaxID.Trim]">
       <ueab:ExcelApplicationCard.Body>
         <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
           <ActivityAction.Argument>
