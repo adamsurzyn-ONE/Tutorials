@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1110,2758</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1109,2758</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -127,12 +127,8 @@
                       </ui:InvokeWorkflowFile>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke System1_ExtractWIsDataTable workflow" sap:VirtualizedContainerService.HintSize="355,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="System1\System1_ExtractWIsDataTable.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_TransactionData">
-                            <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="DataTable" />
-                          </OutArgument>
-                          <OutArgument x:TypeArguments="ui:UiElement" x:Key="out_BrowserWorkItemsInstance">
-                            <mva:VisualBasicReference x:TypeArguments="ui:UiElement" ExpressionText="BrowserInstance" />
-                          </OutArgument>
+                          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_TransactionData">[DataTable]</OutArgument>
+                          <OutArgument x:TypeArguments="ui:UiElement" x:Key="out_BrowserWorkItemsInstance">[BrowserInstance]</OutArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                       <Assign sap:VirtualizedContainerService.HintSize="355,60" sap2010:WorkflowViewState.IdRef="Assign_10">
